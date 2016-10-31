@@ -28,7 +28,7 @@ public class PunctuationStripperTest {
 		// punctuation
 		// arrange
 		PunctuationStripper underTest = new PunctuationStripper();
-		String testString = "Hello!!..";
+		String testString = "Hello";
 		// act
 		String actual = underTest.strip(testString);
 
@@ -54,6 +54,15 @@ public class PunctuationStripperTest {
 	public void shouldStripPunctuation() {
 		// TODO create PunctuationStripper and tell it to strip a string with
 		// leading and trailing whitespace
+		
+		// arrange
+				PunctuationStripper underTest = new PunctuationStripper();
+				String testString = "Hello!!..";
+				// act
+				String actual = underTest.strip(testString);
+
+				Assert.assertEquals("Hello", actual);
+
 	}
 
 	// TODO create additional tests if they make you feel more comfortable with
